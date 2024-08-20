@@ -1,2 +1,4 @@
 pyautogui==0.9.53
 Pillow==9.1.0  # pyautogui dependency for image processing
+opencv-python==4.5.5.64  # OpenCV for image processing
+numpy==1.22.3  # NumPy for array handling and image data manipulation
