@@ -33,8 +33,7 @@ def locate_and_click_send_button():
             return False
 
 
-        print(image_path)
-        button_location = locate_image_opencv(image_path, 0.9)[1]
+        button_location = locate_image_opencv(image_path)[1]
 
         
         if button_location is not None:
@@ -70,8 +69,9 @@ def check_for_invalid_number():
 
 
 
-        invalid_popup = locate_image_opencv(image_path, 0.9)[1]
-        
+        invalid_popup = locate_image_opencv(image_path)[1]
+
+
         if invalid_popup is not None:
             pyautogui.click(invalid_popup)
 
@@ -102,11 +102,9 @@ def is_whatsapp_Notlogged_in():
             return False
 
         
-        invalid_popup = locate_image_opencv(image_path, 0.9)[1]
+        invalid_popup = locate_image_opencv(image_path)[1]
         
         if invalid_popup is not None:
-            pyautogui.click(invalid_popup)
-
             return True
 
         return False
