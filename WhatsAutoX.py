@@ -20,7 +20,7 @@ def locate_and_click_send_button():
         if button_location is not None:
             pyautogui.click(button_location)
             return True
-            
+
         else:
             raise pyautogui.ImageNotFoundException("Could not locate the send button image.")
             return False
