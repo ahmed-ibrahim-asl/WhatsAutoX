@@ -268,10 +268,11 @@ for number in recipient_numbers:
         send_whatsapp_message(number, message_body)
 
 
-    sleep(20)  # Adjust based on your system speed and network latency
-    
 
-# Export skipped numbers to a file
-export_skipped_numbers('skipped_numbers.txt')
-print("Process completed. Skipped numbers have been saved to 'skipped_numbers.txt'.")
+
+if skipped_numbers:
+
+    # Export skipped numbers to a file
+    export_skipped_numbers('skipped_numbers.txt')
+    print("Process completed. Skipped numbers have been saved to 'skipped_numbers.txt'.")
 
