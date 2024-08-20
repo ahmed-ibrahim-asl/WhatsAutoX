@@ -26,17 +26,17 @@ def locate_and_click_send_button():
 
 
 
-        image_path = os.path.normpath(os.path.join(current_dir, "../Don't Touch/not_loggedIn.jpg"))
+        image_path = os.path.normpath(os.path.join(current_dir, "../Don't Touch/send_button_image.jpg"))
 
         if not os.path.exists(image_path):
             print(f"Image file does not exist: {image_path}")
             return False
 
-        button_location = locate_image_opencv(image_path, 0.9)
+
+        print(image_path)
+        button_location = locate_image_opencv(image_path, 0.9)[1]
 
         
-        print("location of btn: " + str(button_location) )
-
         if button_location is not None:
             pyautogui.click(button_location)
             return True
